@@ -1,0 +1,98 @@
+<footer id="footer" class="panel">
+	<div class="inner split">
+		<div class="inner split">
+			<div>
+				<section>
+					<h2>关于张洪Heo图集</h2>
+					<p>想用照片记录一下生活，可能不会是摄影图展示，它只是记录我当时点滴的快乐。</p>
+					<p>采用hexo无服务器部署</p>
+				</section>
+				<section>
+					<h2>联系我</h2>
+					<ul class="icons">
+						<li><a href="https://zhheo.com/" target="_blank" class="iconfont icon-shouye"
+								rel="noopener nofollow"><span class="label">首页</span></a></li>
+						<li><a href="https://weibo.com/u/5772648736" target="_blank" class="iconfont icon-weibo"
+								rel="noopener nofollow"><span class="label">微博</span></a></li>
+						<li><a href="https://github.com/zhheo" target="_blank" class="iconfont icon-github"
+								rel="noopener nofollow"><span class="label">GitHub</span></a></li>
+					</ul>
+				</section>
+				<span style="color: #b5b5b5; font-size: 0.8em;">
+					<script>
+						var _hmt = _hmt || [];
+						(function() {
+							var hm = document.createElement("script");
+							hm.src = "https://hm.baidu.com/hm.js?1bcd964a9a455530a82f509342e13895";
+							var s = document.getElementsByTagName("script")[0];
+							s.parentNode.insertBefore(hm, s);
+						})();
+					</script>
+					<p class="copyright">
+						&copy; 设计 ZHHEO & PLOG主题. ICP备案号:<a href="http://beian.miit.gov.cn/"
+							target="_blank" rel="noopener nofollow">京ICP备xxxxxxxxxxx号</a>
+					</p>
+			</div>
+		</div>
+		<div>
+</footer>
+<script type="text/javascript">
+function isInSight(el) {
+  const bound = el.getBoundingClientRect();
+  const clientHeight = window.innerHeight;
+  //如果只考虑向下滚动加载
+  //const clientWidth=window.innerWeight;
+  return bound.top <= clientHeight + 100;
+}
+
+let index = 0;
+function checkImgs() {
+  const imgs = document.querySelectorAll('.my-photo');
+  for (let i = index; i < imgs.length; i++) {
+    if (isInSight(imgs[i])) {
+      loadImg(imgs[i]);
+      index = i;
+    }
+  }
+  // Array.from(imgs).forEach(el => {
+  //   if (isInSight(el)) {
+  //     loadImg(el);
+  //   }
+  // })
+}
+
+function loadImg(el) {
+  if (!el.src) {
+    const source = el.dataset.src;
+    el.src = source;
+  }
+}
+
+function throttle(fn, mustRun = 10) {
+  const timer = null;
+  let previous = null;
+  return function() {
+    const now = new Date();
+    const context = this;
+    const args = arguments;
+    if (!previous) {
+      previous = now;
+    }
+    const remaining = now - previous;
+    if (mustRun && remaining >= mustRun) {
+      fn.apply(context, args);
+      previous = now;
+    }
+  }
+}
+</script>
+<script>
+    window.onload=checkImgs;
+    window.onscroll = throttle(checkImgs);
+</script>
+<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/1.7.2/jquery.min.js"></script>
+      <script src="js/jquery.poptrox.min.js"></script>
+			<script src="js/browser.min.js"></script>
+			<script src="js/breakpoints.min.js"></script>
+			<script src="js/util.js"></script>
+			<script src="js/main.js"></script>
