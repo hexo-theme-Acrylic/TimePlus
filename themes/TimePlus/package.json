@@ -1,0 +1,25 @@
+{
+	"description": "由Heo设计的Time主题版本，基于HEXO",
+	"version": "0.0.1",
+	"author": "TimePlus<Acrylic@marcus233.top>",
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/TimePlus/TimePlus/issues",
+		"email": "Acrylic@marcus233.top"
+	},
+	"main": "package.json",
+	"homepage": "https://Acrylic.zhheo.com/",
+	"keywords": ["hexo", "theme", "TimePlus"],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"hexo-renderer-pug": "^3.0.0",
+		"hexo-renderer-stylus": "^2.1.0"
+	},
+	"name": "TimePlus",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TimePlus/TimePlus.git"
+	}
+}

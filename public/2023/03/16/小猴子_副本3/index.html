@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+
+<head>
+		<title>小猴子 | HEO的相册集</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="keywords" content="typecho,php,blog">
+		<meta name="description" content="生活的小事">
+    <link rel="apple-touch-icon" href="https://img.zhheo.com/i/2022/10/09/63425954ad147.png">
+    <meta name="apple-mobile-web-app-title" content="张洪Heo图集">
+    <link rel="bookmark" href="https://img.zhheo.com/i/2022/10/09/63425954ad147.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://img.zhheo.com/i/2022/10/09/63425954ad147.png">
+    <link rel="icon" href="https://img.zhheo.com/i/2022/10/08/6340fc3173131.png">
+		<link rel="stylesheet" type="text/css" href="https://plog.zhheo.com/usr/themes/time/assets/css/main.css">
+		<link rel="stylesheet" type="text/css" href="https://plog.zhheo.com/usr/themes/time/assets/css/noscript.css">
+		<noscript><link rel="stylesheet" href="https://plog.zhheo.com/usr/themes/time/assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://plog.zhheo.com/usr/themes/time/assets/css/main.css">
+		<link rel="stylesheet" href="https://cdn3.codesign.qq.com/icons/dDyopjDLkGjVe1g/latest/iconfont.css">
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_1635479_m8o2ir6mitf.css"><script src="https://at.alicdn.com/t/font_1635479_m8o2ir6mitf.js"></script>  
+	<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body class="is-preload">
+    
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://p.zhheo.com/174Mes24091081665202060609.JPG!blogimg_1600w')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">小猴子</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <footer id="footer" class="panel">
+						<div class="inner split">
+							<div class="inner split">
+							<div>
+								<section>
+									<h2>关于张洪Heo图集</h2>
+									<p>想用照片记录一下生活，可能不会是摄影图展示，它只是记录我当时点滴的快乐。</p>
+								</section>
+								<section>
+									<h2>联系我</h2>
+									<ul class="icons">	
+                    <li><a href="https://zhheo.com/" target="_blank" class="iconfont icon-shouye" rel="noopener nofollow"><span class="label">首页</span></a></li>
+						        <li><a href="https://weibo.com/u/5772648736" target="_blank" class="iconfont icon-weibo" rel="noopener nofollow"><span class="label">微博</span></a></li>
+                    <li><a href="https://github.com/zhheo " target="_blank" class="iconfont icon-github" rel="noopener nofollow"><span class="label">GitHub</span></a></li>
+										</ul>
+								</section> 
+								<span style="color: #b5b5b5; font-size: 0.8em;">
+									<script> var _hmt = _hmt || []; (function() {   var hm = document.createElement("script");   hm.src = "";   var s = document.getElementsByTagName("script")[0];    s.parentNode.insertBefore(hm, s); })(); </script>								
+							<p class="copyright">
+									© 设计 ZHHEO &amp; ZMKI 主题：<a href="https://github.com/zhheo/TimePlus" target="_blank" rel="noopener nofollow">TimePlus</a>. ICP备案号:<a href="http://beian.miit.gov.cn/" target="_blank" rel="noopener nofollow">京ICP备19051325号</a>
+								</p></span></div>
+							</div>
+						<div>
+					</div></div><div class="closer"></div></footer>
+<script type="text/javascript">
+function isInSight(el) {
+  const bound = el.getBoundingClientRect();
+  const clientHeight = window.innerHeight;
+  //如果只考虑向下滚动加载
+  //const clientWidth=window.innerWeight;
+  return bound.top <= clientHeight + 100;
+}
+
+let index = 0;
+function checkImgs() {
+  const imgs = document.querySelectorAll('.my-photo');
+  for (let i = index; i < imgs.length; i++) {
+    if (isInSight(imgs[i])) {
+      loadImg(imgs[i]);
+      index = i;
+    }
+  }
+  // Array.from(imgs).forEach(el => {
+  //   if (isInSight(el)) {
+  //     loadImg(el);
+  //   }
+  // })
+}
+
+function loadImg(el) {
+  if (!el.src) {
+    const source = el.dataset.src;
+    el.src = source;
+  }
+}
+
+function throttle(fn, mustRun = 10) {
+  const timer = null;
+  let previous = null;
+  return function() {
+    const now = new Date();
+    const context = this;
+    const args = arguments;
+    if (!previous) {
+      previous = now;
+    }
+    const remaining = now - previous;
+    if (mustRun && remaining >= mustRun) {
+      fn.apply(context, args);
+      previous = now;
+    }
+  }
+}
+</script>
+<script>
+    window.onload=checkImgs;
+    window.onscroll = throttle(checkImgs);
+</script>
+<!-- Scripts -->
+      <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/1.7.2/jquery.min.js"></script>
+      <script src="https://plog.zhheo.com/usr/themes/time/assets/js/jquery.poptrox.min.js"></script>
+			<script src="https://plog.zhheo.com/usr/themes/time/assets/js/browser.min.js"></script>
+			<script src="https://plog.zhheo.com/usr/themes/time/assets/js/breakpoints.min.js"></script>
+			<script src="https://plog.zhheo.com/usr/themes/time/assets/js/util.js"></script><h1></h1>
+			<script src="https://plog.zhheo.com/usr/themes/time/assets/js/main.js"></script>
+</body>
+</html>

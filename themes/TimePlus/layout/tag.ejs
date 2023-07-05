@@ -1,0 +1,28 @@
+<div id="wrapper">
+    <div id="main">
+        <!-- 所有图片卡片 -->
+        <% page.posts.forEach(post => { %>
+        <article class="thumb img-area">
+            <% if (post.img) { %>
+            <a class="image my-photo" alt="loading" href="<%- url_for(post.img) %>">
+                <img data-src="<%- url_for(post.img) %>" class="zmki_px my-photo"
+                    onerror="this.src='https://plog.zhheo.com/usr/themes/time/assets/img/loading.gif';this.onerror=null"
+                    alt="<%= post.title %>">
+            </a>
+            <% } %>
+            <h2><%= post.title %></h2>
+            <p><%= post.info %></p>
+            <% if (post.tags && post.tags.length > 0) { %>
+            <li class="tag-categorys">
+                <% post.tags.forEach(tag => { %>
+                <a href="<%- url_for(tag.path) %>"><%= tag.name %></a>
+                <% }); %>
+            </li>
+            <% } %>
+        </article>
+        <% }); %>
+    </div>
+</div>
+<% if (page.total > 1) { %>
+<%- partial('_partial/paging') %>
+<% } %>
